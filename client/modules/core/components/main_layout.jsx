@@ -1,11 +1,15 @@
 import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import Header from './header';
 
 const Layout = ({content = () => null }) => (
-  <div>
-    <div>
+  <MuiThemeProvider>
+    <div>      
+      <Header />
       {content()}
     </div>
-  </div>
+  </MuiThemeProvider>
 );
 
 export default Layout;
