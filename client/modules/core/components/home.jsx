@@ -1,9 +1,10 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+
+import Contact from './contact';
 
 const Home = () => (
   <div>
-    Hello World!
+    <Contact />
   </div>
 );
 
