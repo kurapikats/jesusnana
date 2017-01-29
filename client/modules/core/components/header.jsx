@@ -19,7 +19,12 @@ class Header extends React.Component {
     });
   }
 
-
+  clickMenu(url) {
+    FlowRouter.go(url);
+    this.setState({
+      open: false
+    });
+  }
 
   render() {
     // <SideNav open={this.state.open} />
@@ -36,7 +41,8 @@ class Header extends React.Component {
           open={this.state.open}
           docked={false}
         >
-          <MenuItem>Short Scripts</MenuItem>
+          <MenuItem onTouchTap={() => { this.clickMenu('/') }}>Home</MenuItem>
+          <MenuItem onTouchTap={() => { this.clickMenu('/short-scripts') }}>Short Scripts</MenuItem>
           <MenuItem>TaxiComplaints</MenuItem>
           <MenuItem>Percentage Calc</MenuItem>
           <MenuItem>CV</MenuItem>
